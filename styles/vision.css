@@ -1,0 +1,86 @@
+/* Vision and Mission Section */
+.vision-mission-section {
+    background-color: white; /* Black background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Box Styling */
+.box {
+    background: linear-gradient(135deg, black,rgb(96, 96, 100)); /* Light gray to white gradient */
+    color: white; /* Black text */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Bulging effect */
+    padding: 20px;
+    width: 45%; /* Default width for desktop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    border-color: #ffc107;
+}
+
+.box h3 {
+    font-size: 1.8rem;
+    color: #ffc107; /* Black color for headings */
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Hover Effect for Boxes */
+.box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        align-items: center;
+    }
+
+    .box {
+        width: 80%; /* Adjust width for tablet screens */
+        margin-bottom: 20px; /* Space between boxes */
+    }
+
+    .box h3 {
+        font-size: 1.5rem; /* Adjust font size for heading */
+    }
+
+    .box p {
+        font-size: 0.9rem; /* Adjust font size for paragraph */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* Boxes take full width on mobile screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .box h3 {
+        font-size: 1.3rem; /* Smaller heading font size */
+    }
+
+    .box p {
+        font-size: 0.85rem; /* Smaller paragraph font size */
+    }
+}

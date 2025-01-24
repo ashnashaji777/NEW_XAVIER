@@ -1,0 +1,283 @@
+/* General Section Styling */
+.faculty-section {
+    padding: 40px 20px;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif;
+}
+
+/* Faculty Profile Styling */
+.faculty-profile {
+    margin-bottom: 40px;
+    border-left: 4px solid #f4c60e; /* Yellow left border */
+    padding-left: 15px;
+}
+
+.faculty-heading {
+    font-size: 28px;
+    color: #f4c60e; /* Yellow color */
+    margin-bottom: 10px;
+}
+
+.faculty-subheading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff; /* White text */
+}
+
+.faculty-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Mentors Section Styling */
+.mentors-heading {
+    font-size: 24px;
+    color: #f4c60e; /* Yellow color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mentors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.mentor-box {
+    background-color: #fff; /* White background */
+    color: black; /* Black text */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.mentor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 10px;
+    border: 2px solid #f4c60e; /* Yellow border */
+}
+
+.mentor-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.mentor-position {
+    font-size: 14px;
+    color: #555; /* Gray text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faculty-heading {
+        font-size: 24px;
+    }
+
+    .faculty-subheading {
+        font-size: 18px;
+    }
+
+    .faculty-content {
+        font-size: 14px;
+    }
+
+    .mentors-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-heading {
+        font-size: 20px;
+    }
+
+    .faculty-subheading {
+        font-size: 16px;
+    }
+
+    .faculty-content {
+        font-size: 14px;
+    }
+
+    .mentor-box {
+        padding: 15px;
+    }
+
+    .mentor-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mentor-name {
+        font-size: 16px;
+    }
+
+    .mentor-position {
+        font-size: 12px;
+    }
+}
+
+
+/* General Section Styling */
+.our-faculty-section {
+    padding: 40px 20px;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center;
+}
+
+.faculty-heading {
+    font-size: 28px;
+    color: #f4c60e; /* Yellow color */
+    margin-bottom: 20px;
+}
+
+/* Faculty Container Styling */
+.faculty-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.faculty-box {
+    background-color: #fff; /* White background */
+    color: black; /* Black text */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faculty-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 10px;
+    border: 3px solid #f4c60e; /* Yellow border */
+}
+
+.faculty-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.faculty-qualification {
+    font-size: 14px;
+    color: #555; /* Gray text */
+    margin-bottom: 15px;
+}
+
+.know-more-btn {
+    background-color: #f4c60e; /* Yellow background */
+    color: black; /* Black text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.know-more-btn:hover {
+    background-color: black; /* Black background */
+    color: #f4c60e; /* Yellow text */
+}
+
+/* Popup Styling */
+.faculty-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 30px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: #f4c60e; /* Yellow text */
+}
+
+.popup-faculty-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 15px;
+    border: 3px solid #f4c60e; /* Yellow border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faculty-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .faculty-name {
+        font-size: 16px;
+    }
+
+    .faculty-qualification {
+        font-size: 12px;
+    }
+
+    .know-more-btn {
+        font-size: 14px;
+    }
+
+    .popup-faculty-photo {
+        width: 100px;
+        height: 100px;
+    }
+}

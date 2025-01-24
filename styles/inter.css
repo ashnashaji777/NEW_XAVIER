@@ -1,0 +1,71 @@
+.text-container {
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center container */
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1 {
+    color: black; /* Blue color for the h1 */
+    font-size: 2.5rem; /* Default font size */
+    font-weight: bold;
+}
+
+h3 {
+    color: rgb(225, 168, 22); /* Yellow color for the h3 */
+    font-size: 1.8rem; /* Default font size */
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Text */
+p {
+    color: #333; /* Default text color */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+
+/* For Tablets (Medium Screens) */
+@media (max-width: 768px) {
+    .text-container {
+        padding: 15px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for h1 */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Adjust font size for h3 */
+    }
+
+    p {
+        font-size: 0.95rem; /* Slightly smaller paragraph text */
+    }
+}
+
+/* For Mobile (Small Screens) */
+@media (max-width: 480px) {
+    .text-container {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller font size for h1 */
+        text-align: center; /* Center align for better readability */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Smaller font size for h3 */
+        text-align: center; /* Center align for smaller screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Smaller font size for paragraphs */
+        line-height: 1.5; /* Slightly tighter line spacing */
+        text-align: justify; /* Justify text for a clean look */
+    }
+}

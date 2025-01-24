@@ -1,0 +1,91 @@
+/* Full-Screen Image Section */
+
+
+/* Overlay to ensure content visibility */
+.full-screen-image .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.5);
+    
+   /* Black overlay with transparency
+     background-color: rgba(14, 14, 14, 0.5); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Yellow Box */
+.yellow-box {
+    background-color: #ffc107; /* Yellow transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    color: black; /* Black text */
+    z-index: 2;
+    max-width: 500px;
+}
+
+/* Program Title */
+.yellow-box .program-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Breadcrumb Links */
+.yellow-box .breadcrumb {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.yellow-box .breadcrumb a {
+    color: black; /* Black text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.yellow-box .breadcrumb a:hover {
+    
+    color: white;
+}
+
+.yellow-box .breadcrumb span {
+    color: black; /* Black for the active page */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .yellow-box {
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    .yellow-box .program-title {
+        font-size: 20px;
+    }
+
+    .yellow-box .breadcrumb {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .yellow-box {
+        max-width: 200px;
+        padding: 10px;
+    }
+
+    .yellow-box .program-title {
+        font-size: 18px;
+    }
+
+    .yellow-box .breadcrumb {
+        font-size: 11px;
+    }
+}

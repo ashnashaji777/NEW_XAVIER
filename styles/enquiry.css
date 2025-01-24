@@ -1,0 +1,142 @@
+/* Enquiry box styling */
+.enquiry-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black; /* Black background */
+    border: 2px solid #f4c60e; /* Yellow border */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    display: none; /* Hidden by default */
+    color: white; /* White text */
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f4c60e; /* Yellow color */
+}
+
+/* Form elements */
+.enquiry-box input,
+.enquiry-box textarea {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid #f4c60e; /* Yellow border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+}
+
+.enquiry-box input::placeholder,
+.enquiry-box textarea::placeholder {
+    color: #f4c60e; /* Yellow placeholder */
+}
+
+.enquiry-box button {
+    display: block;
+    width: 100%;
+    background-color: #f4c60e; /* Yellow background */
+    color: black; /* Black text */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.enquiry-box button:hover {
+    background-color: #ffc107; /* Lighter yellow */
+    color: black;
+}
+
+/* Success Message */
+#successMessage {
+    display: none;
+    color: #ffc107; /* Yellow text */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .enquiry-box {
+        width: 90%; /* Adjust width for tablets */
+        bottom: 10px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .enquiry-box {
+        width: 95%; /* Adjust width for mobile */
+        bottom: 10px;
+        right: 2.5%;
+    }
+
+    .close-btn {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .enquiry-box input,
+    .enquiry-box textarea {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .enquiry-box button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+.whatsapp-icon {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    left: 20px; /* Distance from the left of the viewport */
+    z-index: 1000; /* Keeps it above other elements */
+    width: 60px; /* Default icon width */
+    height: 60px; /* Default icon height */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.whatsapp-icon img {
+    width: 100%; /* Ensures the image fills the icon container */
+    height: 100%; /* Maintains aspect ratio */
+    border-radius: 50%; /* Makes the icon circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(1.1); /* Adds a hover effect */
+    transition: transform 0.2s ease; /* Smooth animation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .whatsapp-icon {
+        width: 50px; /* Adjust width for tablets */
+        height: 50px; /* Adjust height for tablets */
+        bottom: 15px; /* Adjust distance from bottom */
+        left: 15px; /* Adjust distance from left */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon {
+        width: 40px; /* Adjust width for mobile devices */
+        height: 40px; /* Adjust height for mobile devices */
+        bottom: 10px; /* Adjust distance from bottom */
+        left: 10px; /* Adjust distance from left */
+    }
+}

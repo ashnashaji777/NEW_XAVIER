@@ -1,0 +1,163 @@
+/* Blog Section Styles */
+.blog-page {
+    background-color: black;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+    color: #ffc107;
+    margin-bottom: 10px;
+  }
+  
+  .meta-info {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .meta-info span {
+    margin: 0 10px;
+  }
+  
+  .meta-info i {
+    margin-right: 5px;
+    color: #ffc107;
+  }
+  
+  .blog-image-container {
+    margin: 20px 0;
+  }
+  
+  .blog-image {
+    width: 90%;
+    max-width: 900%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  
+  .blog-description {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .advantages-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .advantages-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 1.2rem;
+  }
+  
+  .advantages-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ffc107;
+    font-size: 1.5rem;
+  }
+  
+  .social-media-links {
+    margin: 20px 0;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    color: #ffc107;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: white;
+    transform: scale(1.2);
+  }
+  
+  .navigation-links {
+    margin-top: 30px;
+  }
+  
+  .next-text {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  /* Navigation Links */
+.navigation-links {
+    display: flex;
+    justify-content: space-between; /* Aligns links to left and right ends */
+    margin-top: 30px;
+  }
+  
+  .nav-link {
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: blue;
+    transform: translateX(5px);
+  }
+  
+  .previous-link:hover {
+    transform: translateX(-5px); /* Moves left on hover */
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-title {
+      font-size: 1.8rem;
+    }
+  
+    .blog-description {
+      font-size: 0.95rem;
+    }
+  
+    .advantages-list li {
+      font-size: 0.95rem;
+    }
+  
+    .social-icon {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .blog-title {
+      font-size: 1.5rem;
+    }
+  
+    .blog-description {
+      font-size: 0.9rem;
+    }
+  
+    .advantages-list li {
+      font-size: 0.9rem;
+    }
+  
+    .social-icon {
+      font-size: 1.2rem;
+    }
+  }
+  

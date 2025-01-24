@@ -1,0 +1,81 @@
+/* White Section Styling */
+.white-section {
+    background-color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 400px; /* Adjust image size */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  }
+  
+  .text-container {
+    flex: 1;
+    min-width: 300px; /* Ensure minimum width for text on smaller screens */
+  }
+  
+  .text-container h2 {
+    font-size: 24px;
+    color: #ffc107; /* Dark text color */
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #120000e4; /* Slightly lighter text color */
+    margin-bottom: 10px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column; /* Stack image and text vertically */
+      align-items: center; /* Center align items */
+      text-align: center; /* Center text */
+    }
+  
+    .image-container img {
+      max-width: 300px; /* Reduce image size for tablets */
+    }
+  
+    .text-container h2 {
+      font-size: 20px; /* Adjust heading size */
+    }
+  
+    .text-container p {
+      font-size: 14px; /* Adjust text size for readability */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content-wrapper {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .image-container img {
+      max-width: 250px; /* Further reduce image size for mobile */
+    }
+  
+    .text-container h2 {
+      font-size: 18px; /* Smaller heading size for mobile */
+    }
+  
+    .text-container p {
+      font-size: 12px; /* Smaller text size for readability */
+    }
+  }
+  

@@ -1,0 +1,91 @@
+/* General Styling for Image Grid Section */
+.image-grid-section {
+    background-color: black; /* White background */
+    padding: 40px 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic grid layout */
+    gap: 15px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #f4c60e; /* Yellow border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits without distortion */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.grid-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Image zooms slightly */
+    filter: brightness(0.8); /* Slight dimming effect */
+}
+
+/* Fullscreen Lightbox Overlay */
+.image-lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Black semi-transparent background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #f4c60e; /* Yellow border */
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-item {
+        border: 3px solid #f4c60e;
+    }
+
+    .lightbox-close {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item {
+        border: 2px solid #f4c60e;
+    }
+
+    .lightbox-close {
+        font-size: 20px;
+    }
+}

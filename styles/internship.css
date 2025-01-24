@@ -1,0 +1,73 @@
+/* Internships Section */
+.internships-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content-container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+}
+
+.section-heading {
+    color: #ffc107; /* Yellow color for heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Left align heading */
+}
+
+.section-description {
+    color: #fff; /* White text color */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left; /* Left align text */
+    max-width: 900px;
+    margin: 0 auto; /* Center align the content */
+}
+
+.reason-list {
+    list-style-type: decimal;
+    color: #ffc107; /* Yellow color for list */
+    padding-left: 30px;
+    text-align: left;
+}
+
+.reason-list li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .section-description {
+        font-size: 1rem; /* Adjust description font size */
+    }
+
+    .reason-list li {
+        font-size: 1rem; /* Adjust list item font size */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+
+    .section-description {
+        font-size: 0.9rem; /* Adjust description font size */
+    }
+
+    .reason-list li {
+        font-size: 0.9rem; /* Adjust list item font size */
+    }
+}

@@ -1,0 +1,96 @@
+/* General Styling for Table Section */
+.table-section {
+    background-color: white; /* Black background */
+    padding: 40px 20px;
+}
+
+.table-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+}
+
+/* Section Heading */
+.table-section h2 {
+    text-align: center;
+    font-size: 2.3em;
+    color: #ffc107; /* Yellow heading color */
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+}
+
+/* Table Styling */
+.advisory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    overflow-x: auto; /* Scrollable table on smaller devices */
+}
+
+/* Table Header */
+.advisory-table thead tr {
+    background-color: #333; /* Dark gray header */
+}
+
+.advisory-table th {
+    color: #ffc107; /* Yellow text for header */
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #555; /* Gray border */
+}
+
+/* Table Body */
+.advisory-table tbody tr:nth-child(odd) {
+    background-color: #4a4a4a; /* Dark gray for odd rows */
+}
+
+.advisory-table tbody tr:nth-child(even) {
+    background-color: #2b2b2b; /* Lighter gray for even rows */
+}
+
+.advisory-table td {
+    color: #fff; /* White text for body */
+    padding: 10px;
+    border: 1px solid #555; /* Subtle border for separation */
+    text-align: left;
+    word-wrap: break-word; /* Wrap text to prevent overflow */
+}
+
+/* Hover Effect */
+.advisory-table tbody tr:hover {
+    background-color: #d5cbcb; /* Slightly lighter gray on hover */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .table-section h2 {
+        font-size: 1.8em; /* Reduce heading size */
+    }
+
+    .advisory-table th,
+    .advisory-table td {
+        font-size: 0.9em; /* Reduce text size for table cells */
+        padding: 8px; /* Reduce padding */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .table-section h2 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    .advisory-table th,
+    .advisory-table td {
+        font-size: 0.8em; /* Smaller font size for table cells */
+        padding: 6px; /* Further reduce padding */
+    }
+
+    .advisory-table {
+        width: 100%; /* Ensure table stays within screen width */
+    }
+}

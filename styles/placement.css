@@ -1,0 +1,172 @@
+/* Placements Section */
+.placements-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* Default white text */
+    padding: 40px 20px;
+}
+
+/* Placements Content */
+.placements-content {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center align */
+    padding: 10px;
+}
+
+/* Heading Style */
+.heading {
+    color: #ffc107; /* Yellow color for the heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Align the heading to the left */
+}
+
+/* Subheading Style */
+.sub-heading {
+    color: #ffc107; /* Yellow color for subheading */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Content Text Style */
+.content {
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Objectives List */
+.objectives-list {
+    list-style: none; /* Remove bullet points */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    padding: 0;
+    margin: 0;
+}
+
+.objectives-list li {
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet */
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.objectives-list li::before {
+    content: "•"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: #ffc107; /* Yellow bullet */
+    font-size: 1.5rem; /* Larger bullet size */
+}
+
+/* Training Cell Section */
+.training-cell-section {
+    background-color: #111; /* Darker black background */
+    padding: 40px;
+    margin-top: 40px;
+    color: #fff; /* White text */
+}
+
+/* Training Heading */
+.training-heading {
+    color: #ffc107; /* Yellow color for heading */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Training Description */
+.training-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Training List */
+.training-list {
+    columns: 2; /* Two columns for desktop */
+    column-gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.training-list li {
+    position: relative;
+    padding-left: 30px; /* Space for custom bullet */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.training-list li::before {
+    content: "•"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: #ffc107; /* Yellow bullet */
+    font-size: 1.5rem; /* Larger bullet size */
+}
+
+/* Primary Objectives Section */
+.primary-objectives {
+    margin-top: 40px;
+}
+
+.primary-objectives-heading {
+    color: #ffc107; /* Yellow color for heading */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.primary-objectives-text {
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .heading, .sub-heading, .training-heading, .primary-objectives-heading {
+        font-size: 1.8rem; /* Slightly smaller font sizes */
+    }
+
+    .content, .training-description, .primary-objectives-text {
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .objectives-list {
+        grid-template-columns: 1fr; /* Single column for objectives */
+    }
+
+    .training-list {
+        columns: 1; /* Single column for training list */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .heading, .sub-heading, .training-heading, .primary-objectives-heading {
+        font-size: 1.5rem; /* Smaller font sizes for mobile */
+    }
+
+    .content, .training-description, .primary-objectives-text {
+        font-size: 0.9rem; /* Adjust text size for mobile */
+    }
+
+    .objectives-list li, .training-list li {
+        font-size: 1rem; /* Adjust list font size */
+    }
+}

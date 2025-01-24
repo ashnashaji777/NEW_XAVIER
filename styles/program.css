@@ -1,0 +1,392 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+}
+
+/* Container for the yellow box below the image */
+.yellow-box-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #f4c60e; /* Yellow color */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Yellow box text */
+.yellow-box span {
+    color: #000; /* Black text */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Program Overview Section */
+.program-overview {
+    background-color: black; /* Black background */
+    padding: 40px 20px;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.left-box {
+    flex: 1;
+    background-color: #f4c60e; /* Yellow background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Styling the List */
+.left-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.left-box ul li {
+    margin-bottom: 15px;
+}
+
+/* Styling the Links */
+.left-box ul li a {
+    text-decoration: none;
+    color: black; /* Black text */
+    font-size: 16px;
+    font-weight: bold;
+    display: block; /* Ensure links span full width for better clickability */
+}
+
+.left-box ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .left-box {
+        padding: 15px; /* Adjust padding for medium screens */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    }
+
+    .left-box ul li a {
+        font-size: 14px; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .left-box {
+        padding: 10px; /* Further reduce padding for small screens */
+    }
+
+    .left-box ul li a {
+        font-size: 12px; /* Smaller font size for small screens */
+    }
+}
+
+/* Apply Now Button */
+.apply-now-btn {
+    display: inline-block;
+    background-color: black; /* Black background */
+    color: #fff; /* White text */
+    padding: 12px 30px; /* Padding for button */
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-align: center; /* Center text inside the button */
+    max-width: 100%; /* Ensure button does not overflow */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Hover Effect */
+.apply-now-btn:hover {
+    background-color: #dfd7d7; /* Lighter hover background */
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .apply-now-btn {
+        font-size: 14px; /* Adjust font size for medium screens */
+        padding: 10px 25px; /* Slightly smaller padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .apply-now-btn {
+        font-size: 12px; /* Adjust font size for small screens */
+        padding: 8px 20px; /* Compact padding */
+        width: 100%; /* Full-width button on small screens */
+        margin-top: 10px; /* Adjust margin for better spacing */
+    }
+}
+
+/* Program Content */
+.program-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section Styling */
+.section {
+    padding: 15px;
+    background-color: #fff; /* White background */
+    border-left: 4px solid #f4c60e; /* Yellow left border */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.heading {
+    color: #f4c60e; /* Yellow text */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Content Text */
+.content {
+    color: #333; /* Dark gray text */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* List Styling */
+.highlights-list,
+.major-subjects-list,
+.career-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.highlights-list li,
+.major-subjects-list li,
+.career-list li {
+    background-color: #2e2e2ed7; /* Yellow background */
+    color: #f4c60e; /* Black text */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+.advantages-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns dynamically */
+    gap: 15px; /* Space between items */
+}
+
+.advantages-list li {
+    position: relative; /* Required for positioning the bullet */
+    color: black; /* Black text */
+    padding: 10px 15px 10px 40px; /* Space for the bullet */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    background-color: white; /* Background for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Add yellow bullet symbol */
+.advantages-list li::before {
+    content: '\2022'; /* Unicode for bullet symbol */
+    position: absolute;
+    left: 15px; /* Adjust distance from the left */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    color: #f4c60e; /* Yellow color */
+    font-size: 18px; /* Size of the bullet */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .advantages-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller minimum width */
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .advantages-list li {
+        font-size: 14px; /* Reduce font size */
+        padding: 10px 10px 10px 35px; /* Adjust padding for smaller layout */
+    }
+
+    .advantages-list li::before {
+        font-size: 16px; /* Reduce bullet size */
+        left: 10px; /* Adjust bullet position */
+    }
+}
+
+
+
+/* Table Styling */
+.fee-structure-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.fee-structure-table th,
+.fee-structure-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+.fee-structure-table th {
+    background-color: #f4c60e; /* Yellow background */
+}
+
+.fee-structure-table td:hover {
+    background-color: #d5cbcb; /* Slightly lighter hover */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.fee-structure-table .header-row {
+    background-color: #f4c60e; /* Yellow background */
+    color: #000; /* Black text */
+    font-weight: bold;
+}
+
+.fee-structure-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.fee-structure-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.fee-structure-table tr:last-child td {
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .left-box,
+    .program-content {
+        flex: unset;
+        width: 100%;
+    }
+
+    .apply-now-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 14px;
+    }
+
+    .fee-structure-table th,
+    .fee-structure-table td {
+        font-size: 14px;
+    }
+
+    .highlights-list li,
+    .major-subjects-list li,
+    .career-list li {
+        font-size: 14px;
+    }
+}
+/* Specializations Table Styling */
+.specializations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Maintain rounded corners */
+}
+
+.specializations-table th,
+.specializations-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.specializations-table th {
+    background-color: #f4c60e; /* Yellow header background */
+    color: #000; /* Black text */
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.specializations-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.specializations-table tr:nth-child(odd) {
+    background-color: #fff; /* White for odd rows */
+}
+
+.specializations-table td {
+    font-size: 16px;
+    color: #333; /* Darker gray for readability */
+}
+
+.specializations-table tr:hover {
+    background-color: #f4c60e; /* Yellow highlight on hover */
+    color: #000; /* Black text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Design for Tables */
+@media (max-width: 768px) {
+    .specializations-table th,
+    .specializations-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .specializations-table th,
+    .specializations-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+

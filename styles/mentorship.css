@@ -1,0 +1,72 @@
+/* Mentorship Section */
+.mentorship-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.mentorship-content {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center-align */
+}
+
+.heading {
+    color: #ffc107; /* Yellow color for the heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Align left */
+}
+
+.content {
+    color: #fff; /* White text color */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left */
+    max-width: 900px;
+    margin: 0 auto; /* Center-align the content */
+}
+
+ol {
+    color: #ffc107; /* Yellow for the list items */
+    font-size: 1.2rem;
+    padding-left: 20px;
+    text-align: left;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .content {
+        font-size: 1rem; /* Adjust paragraph text size */
+    }
+
+    ol li {
+        font-size: 1.1rem; /* Adjust list item size */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .content {
+        font-size: 0.9rem; /* Adjust paragraph text size */
+    }
+
+    ol li {
+        font-size: 1rem; /* Adjust list item size */
+    }
+}

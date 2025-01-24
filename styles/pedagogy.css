@@ -1,0 +1,87 @@
+/* General Section Styling */
+.white-section {
+    background-color: #fff; /* White background */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between rows */
+}
+
+/* Content Row Styling */
+.content-row {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Reverse Layout for Alternating Rows */
+.content-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image Container */
+.image-container {
+    flex: 1; /* Take equal space */
+    max-width: 500px; /* Limit the maximum width of the image */
+}
+
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+/* Text Container */
+.text-container {
+    flex: 1; /* Take equal space */
+    text-align: left;
+}
+
+.text-container .content-heading {
+    color: #ffc107; /* Blue color for heading */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.text-container .content-description {
+    color: #333; /* Dark gray text for description */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 30px; /* Add more space between stacked content */
+    }
+
+    .content-row.reverse {
+        flex-direction: column; /* Reverse doesn't apply when stacked */
+    }
+
+    .text-container .content-heading {
+        font-size: 1.5rem; /* Slightly smaller heading size */
+    }
+
+    .text-container .content-description {
+        font-size: 0.9rem; /* Slightly smaller description size */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .text-container .content-heading {
+        font-size: 1.3rem; /* Further reduce heading size */
+    }
+
+    .text-container .content-description {
+        font-size: 0.8rem; /* Further reduce description size */
+    }
+}

@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #000; /* Black background */
+  }
+  
+  /* Contact Form Styles */
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1a1a1a; /* Dark background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    color: #ffc107; /* Yellow */
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .contact-form .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107; /* Yellow button */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .contact-form .btn-submit:hover {
+    background-color: gray; /* Darker yellow */
+    color: white;
+  }
+  
+  /* Error Message Styles */
+  .error-message {
+    color: #ff3b3b; /* Red for errors */
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  /* Location Box Styles */
+  .location-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white; /* Dark background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .location-box p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    color: black; /* Yellow text */
+    font-weight: bold;
+  }
+  
+  .location-box p img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .location-box iframe {
+    border-radius: 8px;
+    border: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+    }
+  
+    .contact-form,
+    .location-box {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  .placement-section {
+    padding: 20px;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffc107 /* Yellow */
+  }
+  
+  /* Table Styles */
+  .table-container {
+    overflow-x: auto;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .responsive-table th {
+    background-color: #ffc107; /* Yellow */
+    color: #000; /* Black */
+  }
+  
+  .responsive-table tr:nth-child(even) {
+    background-color: #333; /* Dark gray for alternate rows */
+  }
+  
+  .responsive-table tr:nth-child(odd) {
+    background-color: #444; /* Slightly lighter gray */
+  }
+  
+  /* Contact Details */
+  .contact-details {
+    margin-top: 20px;
+    color: #ffc107; /* Yellow text */
+    font-weight: bold;
+  }
+  
+  .contact-details a {
+    color: #fff; /* White links */
+    text-decoration: underline;
+  }
+  
+  .contact-details a:hover {
+    color: blue; /* Yellow on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .responsive-table th,
+    .responsive-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

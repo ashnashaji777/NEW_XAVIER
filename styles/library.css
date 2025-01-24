@@ -1,0 +1,107 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+/* Library Section */
+.library-section {
+    padding: 20px;
+    background-color: #000; /* Black background */
+    color: #fff;
+}
+
+/* White Section */
+.white-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns per row */
+    gap: 20px;
+    align-items: center;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for images */
+    gap: 15px;
+}
+
+.images-grid .image-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-column p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Services Section */
+.services-section {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #000; /* Black */
+    color: #fff; /* White text */
+    border: 2px solid #f39c12; /* Yellow border */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.service-item h3 {
+    color: #f39c12; /* Yellow heading */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .white-section .container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .images-grid {
+        grid-template-columns: 1fr; /* Single column for images */
+    }
+
+    .services-container {
+        grid-template-columns: 1fr; /* Single column for services */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,98 @@
+/* FAQ Section */
+.faq-section {
+    background-color: #000; /* Black background */
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .faq-section h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffd700; /* Yellow heading */
+  }
+  
+  /* FAQ Container */
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Individual FAQ Items */
+  .faq-item {
+    border: 1px solid #ffd700; /* Yellow border */
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #ffd700; /* Dark background for items */
+  }
+  
+  .faq-item:hover {
+    transform: scale(1.02); /* Slight scaling on hover */
+    background-color: white; /* Slightly lighter black */
+    color: black;
+  }
+  
+  /* FAQ Question */
+  .faq-question {
+    padding: 15px 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    color: black; /* Yellow text */
+  }
+  
+  .faq-question .arrow {
+    font-size: 18px;
+    color: black; /* White arrow */
+    transition: transform 0.3s;
+  }
+  
+ 
+  .faq-question.active .arrow {
+    transform: rotate(90deg); /* Rotate arrow when active */
+  }
+  
+  .faq-answer {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff; /* White text */
+    background-color: #222; /* Slightly lighter black */
+    display: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .faq-question {
+      font-size: 16px;
+    }
+    
+    .faq-answer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .faq-section {
+      padding: 20px 10px;
+    }
+  
+    .faq-question {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .faq-answer {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+  
+
+  /* Major Specializations Section */

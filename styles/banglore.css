@@ -1,0 +1,157 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+/* Black Section Styling */
+.black-section {
+    padding: 40px 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Images Grid */
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.images-grid .image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* White shadow for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images-grid .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect on Images */
+.images-grid .image-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5); /* Enhance shadow on hover */
+}
+
+.images-grid .image-item:hover img {
+    transform: scale(1.1); /* Larger zoom effect on the image itself */
+    filter: brightness(1.2) saturate(1.2); /* Brighten and slightly saturate colors */
+}
+
+/* Add overlay for dynamic effect */
+.images-grid .image-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.images-grid .image-item:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Optional Caption on Hover */
+.images-grid .image-item:hover::after {
+   
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #f39c12; /* Yellow text */
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.images-grid .image-item::after {
+    opacity: 0;
+}
+
+
+/* Text Column */
+.text-column {
+    padding: 20px;
+    background-color:black; /* Dark gray for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-column p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #f39c12; /* White text */
+}
+
+.reasons-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.reasons-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white; /* White text */
+}
+
+/* Add yellow checkmark bullets */
+.reasons-list li::before {
+    content: '\2713'; /* Unicode for checkmark */
+    position: absolute;
+    left: 0;
+    color: #f39c12; /* Yellow checkmark */
+    font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .text-column {
+        text-align: justify;
+    }
+
+    .images-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two images per row for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .images-grid {
+        grid-template-columns: 1fr; /* One image per row for small screens */
+    }
+
+    .text-column p,
+    .reasons-list li {
+        font-size: 0.9rem;
+    }
+}

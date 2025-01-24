@@ -1,0 +1,908 @@
+/* Full-Screen Slider Container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Common Slide Styles */
+.slide {
+    display: none; /* Hide all slides initially */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-slide img, .video-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the images and videos cover the entire screen */
+}
+
+/* Overlay Box for Heading and Description */
+.overlay {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: rgba(27, 27, 27, 0.7); /* White transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: left;
+}
+
+.overlay h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.overlay p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Show the active slide */
+.slide.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay {
+        left: 5%;
+        width: 80%;
+    }
+    
+    .overlay h3 {
+        font-size: 16px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        left: 5%;
+        width: 90%;
+    }
+
+    .overlay h3 {
+        font-size: 14px;
+    }
+
+    .overlay p {
+        font-size: 10px;
+    }
+}
+
+
+
+/*dark section*//* Black Background Section */
+.black-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Space around the section */
+    text-align: center; /* Center align heading by default */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 2.5rem; /* Larger font size */
+    color: #ffc107; /* Yellow color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Explicit center alignment */
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between paragraph and video */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between text and video */
+}
+
+/* Text Content */
+.text-content {
+    flex: 1; /* Flexible width */
+    min-width: 300px; /* Minimum width for smaller screens */
+    text-align: left; /* Align text to the left */
+    line-height: 1.6; /* Better readability */
+    font-size: 1.2rem; /* Standard font size */
+}
+
+/* Video Content */
+.video-content {
+    flex: 1; /* Flexible width */
+    min-width: 300px; /* Minimum width for smaller screens */
+}
+
+.video-box {
+    position: relative;
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    background-color: #333; /* Dark background for the video box */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Shadow effect */
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .text-content {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .video-box {
+        width: 100%; /* Full width for video box */
+    }
+}
+
+/* Yellow Background Section */
+.yellow-section {
+    background-color: #ffc107; /* Yellow background */
+    color: #333; /* Dark text for contrast */
+    padding: 40px 20px; /* Space around the section */
+    text-align: center; /* Center-align heading and paragraph */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 2.5rem; /* Larger font size for heading */
+    margin-bottom: 15px; /* Space below heading */
+    
+}
+
+/* Section Description */
+.section-description {
+    font-size: 1.2rem; /* Slightly larger paragraph font */
+    margin-bottom: 30px; /* Space below paragraph */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Slightly muted text color */
+}
+
+/* Box Container */
+.box-container {
+    display: flex;
+    justify-content: center; /* Center boxes horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between boxes */
+}
+
+/* Info Box */
+.info-box {
+    background-color: #fff; /* White background for the box */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    flex: 1; /* Allow boxes to grow and shrink */
+    max-width: 300px; /* Limit box width */
+    text-align: center; /* Center-align content */
+}
+
+/* Icon in Box */
+.box-icon {
+    width: 60px; /* Fixed size for icons */
+    height: 60px;
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+/* Tagline in Box */
+.box-tagline {
+    font-size: 1.2rem; /* Font size for tagline */
+    margin-bottom: 10px; /* Space below tagline */
+    color: #333; /* Dark text color */
+    font-weight: bold;
+}
+
+/* Description in Box */
+.box-description {
+    font-size: 1rem; /* Standard font size for description */
+    color: #666; /* Muted text color */
+    line-height: 1.4; /* Improve readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center-align boxes */
+    }
+}
+
+
+
+/* Black Background Section */
+/* Black Background Section programs at xaviers college */
+.tabs-section {
+    background-color: #000; /* Black background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Heading and Description */
+.program-heading {
+    color: #ffc107; /* Yellow heading color */
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.program-description {
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Tabs Styling */
+.tabs {
+    margin-top: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: 2px solid yellow; /* Yellow border */
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff; /* White text */
+    border-radius: 5px;
+    margin: 0 5px; /* Add spacing between buttons */
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: yellow; /* Yellow background on hover */
+    color: #000; /* Black text */
+}
+
+.tab-button.active {
+    background-color: yellow; /* Yellow active tab */
+    color: #000; /* Black text */
+}
+
+/* Programs Container */
+.programs-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center align cards */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+/* Program Card */
+.program-card {
+    background-color: #f5f5f5; /* Dark gray background for card */
+    color: black; /* White text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    width: calc(50% - 20px); /* Two cards per row */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 500px;
+}
+
+.program-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Program Image */
+.program-card img {
+    width: 90%; /* Full width of the card */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Space below image */
+}
+
+/* Program Title */
+.program-card h3 {
+    font-size: 1.2rem;
+    color: black; /* Yellow text */
+    margin-bottom: 10px; /* Space below title */
+    font-weight: bold;
+}
+
+/* Apply Button */
+.program-card button {
+    background-color: #ffc107; /* Yellow button */
+    color: #000; /* Black text on button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.program-card button:hover {
+    background-color: blue; /* Slightly darker yellow */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .program-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-button {
+        padding: 8px 15px; /* Smaller buttons for narrow screens */
+    }
+
+    .program-heading {
+        font-size: 1.5rem; /* Smaller font for heading */
+    }
+
+    .program-description {
+        font-size: 1rem; /* Smaller description text */
+    }
+}
+
+
+/* Yellow Section Styling - International Tours */
+.yellow-section {
+    background-color: #ffc107; /* Yellow background */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center-align text */
+}
+
+/* Title Styling */
+.section-title {
+    color: black; /* Black title text */
+    font-size: 2rem; /* Large font size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Description Styling */
+.section-description {
+    color: #000; /* Black description text */
+    font-size: 1.2rem; /* Medium font size */
+    line-height: 1.6; /* Better readability */
+    max-width: 1000px; /* Limit text width for large screens */
+    margin: 0 auto 30px; /* Center the description and add spacing below */
+    text-align: center; /* Center-align the description */
+}
+
+/* Image Container */
+.image-container {
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack rows vertically */
+    gap: 20px; /* Space between rows */
+}
+
+/* Image Row */
+.image-row {
+    display: flex; /* Flex layout for images */
+    justify-content: center; /* Center-align images in the row */
+    gap: 20px; /* Space between images */
+}
+
+/* Image Styling */
+.image-row a {
+    display: block; /* Make anchor a block element */
+    width: 50%; /* Each image takes up half the row width */
+    max-width: 500px; /* Limit maximum width of images */
+}
+
+.image-row img {
+    width: 100%; /* Image spans the full width of its container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    object-fit: cover; /* Ensures images cover their containers without distortion */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Hover Effect */
+.image-row img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column; /* Stack images vertically */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .image-row a {
+        width: 100%; /* Each image takes full width */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Slightly smaller title */
+    }
+
+    .section-description {
+        font-size: 1rem; /* Adjust font size for description */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem; /* Smaller title font size for mobile screens */
+    }
+
+    .section-description {
+        font-size: 0.9rem; /* Smaller description text */
+    }
+
+    .image-row a {
+        width: 100%; /* Images take full width */
+    }
+
+    .image-container {
+        gap: 10px; /* Reduce gap for compact spacing */
+    }
+}
+
+
+
+
+
+/* Title Styling */
+/* Light Blue Section Styling for Blogs */
+.light-blue-section {
+    background-color: #cccdcffa; /* Light blue background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+.section-title {
+    color: hsl(34, 100%, 50%); /* Yellow-orange title */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Blog Container Styling */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Blog Box Styling */
+.blog-box {
+    width: 250px; /* Default width for blog boxes */
+    background-color: #fff; /* White background for blog boxes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect for Blog Boxes */
+.blog-box:hover {
+    transform: translateY(-10px); /* Slight upward lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image Styling */
+.blog-box img {
+    width: 100%; /* Full-width image */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+    border-bottom: 2px solid black; /* Blue border under the image */
+    transition: transform 0.3s ease-in-out; /* Smooth image transition */
+}
+
+/* Hover Effect for Images */
+.blog-box:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Tagline Styling */
+.tagline {
+    padding: 10px;
+    color: #333; /* Dark text */
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f0f8ff; /* Light background for tagline */
+    margin: 0;
+}
+
+/* Read More Button Styling */
+.read-more {
+    background-color: #ffc107; /* Yellow button */
+    color: #0b0900f3; /* Dark text for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: black; /* Blue on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .blog-box {
+        width: 45%; /* Two blog boxes per row on medium screens */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Adjust font size for the title */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .blog-box {
+        width: 100%; /* Single blog box per row on small screens */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Smaller font size for the title */
+    }
+
+    .read-more {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+}
+
+
+
+
+/* Black background section for top recruiters */
+.top-recruiters-section {
+    background-color: #000; /* Black background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Section title */
+.section-title {
+    color: #ffc107; /* Yellow title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Add spacing for a bold look */
+}
+
+/* Logos container */
+.recruiter-logos {
+    display: flex; /* Use flex for horizontal alignment */
+    flex-wrap: wrap; /* Allow logos to wrap to the next line if space is limited */
+    justify-content: center; /* Center logos */
+    gap: 30px; /* Space between logos */
+    animation: scrollLogos 60s linear infinite; /* Slow horizontal scrolling */
+}
+
+/* Individual Logo Container */
+.logo-container {
+    width: 150px; /* Increased width for logos */
+    height: 120px; /* Adjust height for better fit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circle shape */
+    overflow: hidden;
+    background-color: white; /* Dark gray background inside circle */
+    border: 3px solid #ffc107; /* Yellow border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+/* Styling the Logos */
+.recruiter-logo {
+    width: 80%; /* Adjust width to maintain aspect ratio */
+    height: 80%; /* Adjust height to maintain aspect ratio */
+    object-fit: contain; /* Maintain the logo's aspect ratio */
+    border-radius: 0; /* Ensure the logo maintains its natural shape */
+}
+
+/* Hover Effect for Logos */
+.logo-container:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 15px #ffc107; /* Intensify glow */
+}
+
+/* Dynamic Scrolling Animation */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0); /* Start from the left */
+    }
+    100% {
+        transform: translateX(-100%); /* Move logos to the left */
+    }
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 120px; /* Adjust logo container width */
+        height: 120px; /* Adjust height for tablet screens */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Adjust title size */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .logo-container {
+        width: 100px; /* Adjust logo container width */
+        height: 100px; /* Adjust height for mobile screens */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Adjust title size for small screens */
+    }
+}
+
+.student-reviews {
+    padding: 20px;
+    background-color: #dcd8d8;
+    position: relative; /* Ensure proper positioning for child elements */
+  }
+  
+  .review-container {
+    max-width: 1000px; /* Increase width to match the box */
+    width: 100%; /* Ensure it respects the max-width */
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  .review-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .review-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .review {
+    background-color: #ffc107;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Match the review-container width */
+    max-width: 1000px; /* Fixed width for the box */
+    margin: 0 auto; /* Center the box */
+  }
+  
+  .review-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #000;
+  }
+  
+  .student-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .student-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .student-name {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 90%; /* Align arrows vertically to the middle of the box */
+    width: 100%; /* Ensure they span the entire section */
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Avoid interfering with clicks outside the arrows */
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    pointer-events: auto; /* Re-enable pointer events for the arrow itself */
+  }
+  
+  .arrow:hover {
+    color: blue;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .review-container {
+      max-width: 100%; /* Adjust to screen size */
+      padding: 15px;
+    }
+  
+    .review {
+      max-width: 100%; /* Adjust box size for smaller screens */
+    }
+  
+    .review-heading {
+      font-size: 1.8rem;
+    }
+  
+    .review-subheading {
+      font-size: 1rem;
+    }
+  
+    .student-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .student-photo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .student-name {
+      margin-top: 5px;
+    }
+  
+    .arrow {
+      font-size: 1.5rem; /* Slightly smaller arrows for small screens */
+    }
+  }
+  
+  .mixed-background-section {
+    background: linear-gradient(to top, black, gray);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Automatically adjusts to content height */
+  min-height: 200px; /* Ensure it has some height on small screens */
+}
+
+.content-container1 {
+  max-width: 800px;
+  width: 100%; /* Ensure it adapts to smaller screens */
+  padding: 10px;
+}
+
+.section-heading1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-description1 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .section-heading1 {
+    font-size: 1.8rem; /* Adjust heading size for tablets */
+  }
+
+  .section-description1 {
+    font-size: 1rem; /* Adjust description size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading1 {
+    font-size: 1.5rem; /* Adjust heading size for mobile devices */
+  }
+
+  .section-description1 {
+    font-size: 0.9rem; /* Adjust description size for mobile devices */
+  }
+
+  .mixed-background-section {
+    padding: 30px 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+
+
+  .overlay {
+    background: rgba(20, 20, 20, 0.6); /* Add a semi-transparent black overlay for better text visibility */
+    padding: 20px;
+    max-width: 800px; /* Constrain content width */
+    width: 90%; /* Responsive width */
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  
+  .section-title2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section-title2 span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffc107; /* Highlight "BANGALORE" in yellow */
+  }
+  
+  .section-description2 {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    color: #000;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .section-title span {
+      font-size: 2.5rem;
+    }
+  
+    .section-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-title span {
+      font-size: 2rem;
+    }
+  
+    .section-description {
+      font-size: 0.9rem;
+    }
+  }
+  

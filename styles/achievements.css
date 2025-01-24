@@ -1,0 +1,57 @@
+/* Certificate Section */
+.certificate-section {
+    background-color: #000; /* Black background */
+    padding: 50px 20px; /* Add space around the section */
+    text-align: center; /* Center-align contents */
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center; /* Center the certificates horizontally */
+    gap: 20px; /* Add space between the certificates */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.certificate {
+    flex: 1 1 calc(50% - 20px); /* Each certificate takes up 50% of the row minus the gap */
+    max-width: 600px; /* Limit the maximum width of each certificate */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate img {
+    width: 100%; /* Ensure images scale to fit the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Subtle white shadow for better visibility */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.certificate img:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .certificate-container {
+        gap: 15px; /* Reduce gap between certificates */
+    }
+
+    .certificate {
+        flex: 1 1 80%; /* Certificates take up more width on tablets */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .certificate-container {
+        gap: 10px; /* Further reduce gap for compact screens */
+    }
+
+    .certificate {
+        flex: 1 1 100%; /* Each certificate takes the full width */
+    }
+}

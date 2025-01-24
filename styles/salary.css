@@ -1,0 +1,99 @@
+/* Gray Box Styling */
+.gray-box {
+    background-color: #000; /* Black background */
+    padding: 20px;
+    text-align: center;
+}
+
+.gray-box .box-heading {
+    color: #ffc107; /* Yellow text color */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gray-box .breadcrumb {
+    color: #fff; /* White text */
+    font-size: 1rem;
+}
+
+.gray-box .breadcrumb a {
+    color: #ffc107; /* Yellow link color */
+    text-decoration: none;
+}
+
+.gray-box .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Placements Section */
+.placements-section {
+    background-color: #000; /* Black background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.placements-section .heading {
+    font-size: 2.5rem;
+    color: #ffc107; /* Yellow heading */
+    margin-bottom: 20px;
+}
+
+.placements-section .placement-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle shadow for contrast */
+}
+
+.placements-section .description {
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center align the text */
+    text-align: justify;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+    .gray-box .box-heading {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .placements-section .heading {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .placements-section .description {
+        font-size: 0.95rem; /* Slightly smaller text */
+    }
+
+    .placements-section .placement-image {
+        max-width: 90%; /* Adjust image size */
+    }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .gray-box .box-heading {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .placements-section .heading {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .placements-section .description {
+        font-size: 0.9rem; /* Smaller text size */
+        line-height: 1.4; /* Adjust line height */
+    }
+
+    .placements-section .placement-image {
+        max-width: 100%; /* Image takes full width */
+    }
+}

@@ -1,0 +1,78 @@
+/* Educational Loan Section Styling */
+.education-loan-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .education-loan-section .container {
+    max-width: 1000px; /* Limit content width for readability */
+    margin: 0 auto; /* Center align the section */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .education-loan-section .section-title {
+    color: #ffc107; /* Yellow title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .education-loan-section .section-description {
+    color: #fff; /* White text for descriptions */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .education-loan-section .email-link {
+    color: #ffc107; /* Yellow link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .education-loan-section .email-link:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .education-loan-section .note {
+    color: #ccc; /* Light gray for the note */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 768px) {
+    .education-loan-section .section-title {
+      font-size: 2rem; /* Adjust title size */
+    }
+  
+    .education-loan-section .section-description {
+      font-size: 0.95rem; /* Adjust text size */
+    }
+  
+    .education-loan-section .note {
+      font-size: 0.85rem; /* Adjust note size */
+    }
+  }
+  
+  /* Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .education-loan-section .section-title {
+      font-size: 1.8rem; /* Adjust title size */
+    }
+  
+    .education-loan-section .section-description {
+      font-size: 0.9rem; /* Adjust text size */
+    }
+  
+    .education-loan-section .note {
+      font-size: 0.8rem; /* Adjust note size */
+    }
+  }
+  

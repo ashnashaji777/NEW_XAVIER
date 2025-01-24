@@ -1,0 +1,93 @@
+/* IIP Section */
+.iip-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .content-container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .section-title {
+    color: #ffc107; /* Yellow color for the title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    color: #fff; /* White text for description */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .sub-title {
+    color: #ffc107; /* Yellow color for subtitles */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .perks-list,
+  .advances-list {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .perks-list li,
+  .advances-list li {
+    color: #fff; /* White text for list items */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem; /* Adjust title size */
+    }
+  
+    .description {
+      font-size: 1rem; /* Adjust description size */
+    }
+  
+    .sub-title {
+      font-size: 1.8rem; /* Adjust subtitle size */
+    }
+  
+    .perks-list li,
+    .advances-list li {
+      font-size: 1rem; /* Adjust list item size */
+    }
+  }
+  
+  /* Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem; /* Adjust title size for mobile */
+    }
+  
+    .description {
+      font-size: 0.9rem; /* Smaller description size */
+    }
+  
+    .sub-title {
+      font-size: 1.5rem; /* Smaller subtitle size */
+    }
+  
+    .perks-list li,
+    .advances-list li {
+      font-size: 0.9rem; /* Smaller list item size */
+    }
+  }
+  

@@ -1,0 +1,73 @@
+/* Recruiters Section */
+.top-recruiters-section {
+    background-color: #000; /* Black background */
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    color: #ffc107; /* Yellow title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  /* Logos container */
+  .recruiter-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of logos */
+    justify-content: center;
+    gap: 20px; /* Space between logos */
+  }
+  
+  /* Individual logo container */
+  .logo-container {
+    width: 150px; /* Fixed width for the container */
+    height: 150px; /* Fixed height for the container */
+    background-color: white; /* Dark gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Slightly rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  }
+  
+  /* Styling the logos */
+  .recruiter-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  /* Hover effect */
+  .logo-container:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 15px rgba(255, 193, 7, 0.8); /* Yellow glow */
+  }
+  
+  /* Responsive Design */
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 768px) {
+    .logo-container {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* Small Screens (Mobile) */
+  @media (max-width: 480px) {
+    .logo-container {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem; /* Adjust title size for small screens */
+    }
+  }
+  
